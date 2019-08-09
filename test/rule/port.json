@@ -1,0 +1,6 @@
+{
+  "version" : 1,
+  "sshd_port" : [22],
+  "http_port" : [80],
+  "dns_port" : [53]
+}

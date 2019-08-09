@@ -1,0 +1,4 @@
+c++  -I../jansson/include -ldl -lstdc++ -lcrypto -lpthread -fPIC -Wall -Wextra -fvisibility=hidden -Wl,--whole-archive /root/.netbeans/remote/192.168.222.249/a6d5fb8cd2f96f8-Windows-x86_64/D/NetBeansProjects/taurus/jansson/lib/libjansson.a -Wl,--no-whole-archive -shared -o libtaurus.so src/cjson_glue.cpp src/info_manager.cpp src/interprocess.cpp src/report.cpp src/rule_manager.cpp src/symbols.c src/utils.cpp src/taurus_lib.cpp   
+/root/.netbeans/remote/192.168.222.249/a6d5fb8cd2f96f8-Windows-x86_64/D/NetBeansProjects/taurus/jansson/lib/libjansson.a: file not recognized: File format not recognized
+collect2: ld returned 1 exit status
+gmake: *** [taurus_lib] Error 1

@@ -1,0 +1,17 @@
+{
+    "isolation": {
+        "cluster_ips": {
+            "addr": [
+                {
+                    "type": 1, 
+                    "value": [
+                        "10.109.30.42", 
+                        "10.156.65.48"
+                    ]
+                }
+            ], 
+            "deploy": true
+        }
+    },
+    "version": 1
+}

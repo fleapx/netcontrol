@@ -1,0 +1,48 @@
+{
+  "version": 1,
+  "base_rules": [
+    {
+      "rule_name": "base_service_inbound_tcp_port",
+      "rules": [
+        {
+          "direction": "IN",
+          "protocol": "TCP",
+          "describe": "input accept ${base_sevice_tcp_port}",
+          "local": {
+            "ports": [
+              "sshd_port"
+            ]
+          },
+          "action": "ACCEPT"
+        }
+      ]
+    }
+  ],
+  "policys": [
+    {
+      "type": "cluster_ips",
+      "base_rules": [
+        "base_service_inbound_tcp_port"
+      ],
+      "rules": [
+        {
+          "direction": "IN",
+          "protocol": "TCP",
+          "describe": "input accept ${linux_relay}",
+          "local": {
+            "ports": [
+              "sshd_port"
+            ]
+          },
+          "remote": [
+            {
+              "addr_type": 255,
+              "addr_value": "relay_server"
+            }
+          ],
+          "action": "ACCEPT"
+        }
+      ]
+    }
+  ]
+}
